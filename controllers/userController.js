@@ -71,7 +71,8 @@ const loginUser = async(req, res) => {
             res.cookie("userId", user._id.toString(), {
             httpOnly: true,        // Prevents JS from accessing it on the client
             secure: true,          // Ensures it's sent over HTTPS
-            sameSite: "Strict",    // Prevents CSRF in most cases
+            sameSite: "None",     // Prevents CSRF in most cases
+            path: "/",
             maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
             });
 
