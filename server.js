@@ -16,7 +16,7 @@ connectDB()
 //Middlewares
 
 app.use(express.json())
-app.use(cors({origin: "http://localhost:4321", credentials: true, }))
+app.use(cors({origin: "https://saddled-backend.vercel.app", credentials: true, }))
 app.use(cookieParser());
 
 //API Endpoints
