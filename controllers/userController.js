@@ -88,18 +88,7 @@ const loginUser = async(req, res) => {
     }
 }
 
-//Route for getting user
-const getUser = async (req, res) => {
-    try{
-        
-        console.log(req.cookies);
-        res.json({success:true});
-    }
-    catch(error){
-        console.log(error);
-        res.json({success:false, message:error.message});
-    }
-}
+
 
 //Route for admin login
 const adminLogin = async(req, res) => {
@@ -119,5 +108,5 @@ const adminLogin = async(req, res) => {
     }
 }
 
-export {loginUser, registerUser, adminLogin, getUser};
+export {loginUser, registerUser, adminLogin};
 
